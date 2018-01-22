@@ -10,10 +10,10 @@ Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
 def main():
     """ Calls the other functions to test them. """
     # run_test_triangle_right_justified()
-    run_test_triangle_upside_down()
+    # run_test_triangle_upside_down()
     # run_test_vee()
     # run_test_numbers_constant_forward()
-    # run_test_numbers_constant_backwards()
+    run_test_numbers_constant_backwards()
     # run_test_numbers_increasing_forward()
 
 
@@ -181,6 +181,17 @@ def vee(r):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
+    for k in range(r,0,-1):
+        for j in range(r-k):
+            print(' ',end='')
+        for i in range(k):
+            print(i+1,end='')
+        print(end='-')
+        for o in range(k,0,-1):
+            print(o,end='')
+        for j in range(r-k):
+            print(' ',end='')
+        print()
 
 
 def run_test_numbers_constant_forward():
@@ -239,6 +250,14 @@ def numbers_constant_forward(r, maxnum, n):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
+    for k in range(r):
+        for j in range(maxnum):
+            for i in range(n):
+                print(j,end='')
+            print(end=' ')
+        print()
+
+
 
 
 def run_test_numbers_constant_backwards():
@@ -281,6 +300,12 @@ def numbers_constant_backwards(r, maxnum, n):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
+    for k in range(r):
+        for j in range(maxnum,0,-1):
+            for o in range(n):
+                print(j,end='')
+            print(end=' ')
+        print()
 
 
 def run_test_numbers_increasing_forward():
