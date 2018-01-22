@@ -3,18 +3,18 @@ This project demonstrates NESTED LOOPS (i.e., loops within loops)
 in the context of PRINTING on the CONSOLE.
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
+         their colleagues and Hao Hu.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
     """ Calls the other functions to test them. """
-    run_test_triangle_right_justified()
+    # run_test_triangle_right_justified()
     run_test_triangle_upside_down()
-    run_test_vee()
-    run_test_numbers_constant_forward()
-    run_test_numbers_constant_backwards()
-    run_test_numbers_increasing_forward()
+    # run_test_vee()
+    # run_test_numbers_constant_forward()
+    # run_test_numbers_constant_backwards()
+    # run_test_numbers_increasing_forward()
 
 
 def run_test_triangle_right_justified():
@@ -73,6 +73,13 @@ def triangle_right_justified(r):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
+    for k in range(1,r+1):
+        for j in range(r-k):
+            print(' ',end='')
+        for i in range(k):
+            print(i+1,end='')
+        print()
+
 
 
 def run_test_triangle_upside_down():
@@ -117,6 +124,12 @@ def triangle_upside_down(r):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
+    for k in range(r):
+        for j in range(r-k):
+            print(j+1,end='')
+        for i in range(k):
+            print(' ',end='')
+        print()
 
 
 def run_test_vee():
